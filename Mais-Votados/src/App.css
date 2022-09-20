@@ -1,0 +1,34 @@
+.App {
+  /* colocar no meio da tela  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(97, 158, 177);
+}
+
+button{
+  background-color: #bc4ed89d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+#move{
+  left: 200px;
+}
+
+#change:hover{
+  cursor: pointer;
+}
