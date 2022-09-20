@@ -1,10 +1,12 @@
 .App {
-  /* colocar no meio da tela  */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(97, 158, 177);
+  background-image: url('https://i.pinimg.com/736x/5f/b9/1d/5fb91d41a2adc9e97fc61864b6c90fdc.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 450px;
 }
 
 button{
