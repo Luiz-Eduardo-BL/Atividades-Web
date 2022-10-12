@@ -1,0 +1,100 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "John",
+      "curso": "EC",
+      "IRA": 8.5
+    },
+    {
+      "id": 2,
+      "name": "Jane",
+      "curso": "DD",
+      "IRA": 7.8
+    },
+    {
+      "id": 3,
+      "name": "Mary",
+      "curso": "ES",
+      "IRA": 6.5
+    },
+    {
+      "id": 4,
+      "name": "Peter",
+      "curso": "CC",
+      "IRA": 9.5
+    },
+    {
+      "name": "Ellem",
+      "course": "CC",
+      "ira": "10",
+      "id": 5
+    },
+    {
+      "name": "Fernando",
+      "curso": "CC",
+      "IRA": "8.5",
+      "id": 6
+    },
+    {
+      "name": "Duduh",
+      "curso": "ES",
+      "IRA": "10.0",
+      "id": 7
+    },
+    {
+      "name": "JP",
+      "curso": "CC",
+      "IRA": "8",
+      "id": 8
+    },
+    {
+      "name": "Ellem",
+      "curso": "CC",
+      "IRA": "9.9",
+      "id": 9
+    },
+    {
+      "name": "Deigila",
+      "curso": "CC",
+      "IRA": "9.7",
+      "id": 10
+    },
+    {
+      "name": "Danyel",
+      "curso": "EC",
+      "IRA": "8.9",
+      "id": 11
+    },
+    {
+      "name": "Granzott",
+      "curso": "EC",
+      "IRA": "9.2",
+      "id": 12
+    },
+    {
+      "name": "Teste",
+      "curso": "HH",
+      "IRA": "2",
+      "id": 13
+    },
+    {
+      "name": "Teste",
+      "curso": "KK",
+      "IRA": "7",
+      "id": 14
+    },
+    {
+      "name": "Teste2",
+      "curso": "JJ",
+      "IRA": "7",
+      "id": 15
+    },
+    {
+      "name": "Jefferson",
+      "curso": "DD",
+      "IRA": "8",
+      "id": 16
+    }
+  ]
+}
