@@ -1,9 +1,8 @@
 let studentsList = [
-  {name: 'Duduh', curso: 'ES', IRA: '9.8'},
-  {name: 'Ellem', curso: 'CC', IRA: '9.0'},
-  {name: 'Fernando', curso: 'CC', IRA: '9.0'},
-  {name: 'Pedro', curso: 'CC', IRA: '9.0'},
-  {name: 'JP', curso: 'CC', IRA: '9.0'}
+    {name:'Jefferson', course:'SI', ira: 6.8},
+    {name:'Wladimir', course:'SI', ira: 8.8},
+    {name:'João Marcelo', course:'EC', ira: 7.2},
+    {name:'Vilnei', course:'DD', ira: 4.5},
 ]
 
 export {studentsList}

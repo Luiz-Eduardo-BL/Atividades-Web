@@ -1,58 +1,41 @@
-import { useState, useEffect } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import FirebaseContext from '../../utils/FirebaseContext'
-import StudentService from '../../services/StudentService'
+import TeacherService from '../../services/TeacherService'
 
-const EditStudentPage = () => {
+const CreateTeacherPage = () => {
     return (
         <FirebaseContext.Consumer>
-            {value => <EditStudent firebase={value} />}
+            {value => <CreateTeacher firebase={value} />}
         </FirebaseContext.Consumer>
     )
 }
 
-const EditStudent = (props)=> {
-
+const CreateTeacher = (props) => {
+  
     const [name, setName] = useState('')
     const [course, setCourse] = useState('')
-    const [ira, setIra] = useState(0.0)
-
+    const [salary, setSalary] = useState(0.0)
     const navigate = useNavigate()
-    const params = useParams()
 
-    useEffect(
-        ()=>{
-            StudentService.retrieve(
-                props.firebase.getFirestoreDb(),
-                (student)=>{
-                    setName(student.name)
-                    setCourse(student.course)
-                    setIra(student.ira)
-                },
-                params.id
-            )
-        }
-        ,
-        []
-    )
-
-    const handleSubmit = (event)=> {
+    //criar igual o createStudent
+    const handleSubmit = (event) => {
         event.preventDefault()
-        const studentUpdated = {name,course,ira}
-        StudentService.update(
+        const newTeacher = { name, course, salary }
+        TeacherService.add(
             props.firebase.getFirestoreDb(),
-            (result)=>{
-                navigate('/listStudent')
+            (id) => {
+              alert('Professor criado com sucesso!')
+              navigate('/listTeacher')
             },
-            params.id,
-            studentUpdated
+            newTeacher
         )
     }
 
     return (
-        <div style={{marginTop:20}}>
-            <h2>Editar Estudante</h2>
+        <div style={{ marginTop: 20 }}>
+            <h2>Criar Professor</h2>
             <form onSubmit={handleSubmit}>
                 <div className='form-group'>
                     <label>Nome: </label>
@@ -60,7 +43,6 @@ const EditStudent = (props)=> {
                         type='text'
                         className='form-control'
                         placeholder='Digite seu nome'
-                        value={(name === null || name === undefined)?'':name}
                         onChange={
                             (event)=>{
                                 setName(event.target.value)
@@ -74,7 +56,6 @@ const EditStudent = (props)=> {
                         type='text'
                         className='form-control'
                         placeholder='Digite seu curso'
-                        value={course ?? ''}
                         onChange={
                             (event)=>{
                                 setCourse(event.target.value)
@@ -82,25 +63,26 @@ const EditStudent = (props)=> {
                         }
                     />
                 </div>
+
                 <div className='form-group'>
-                    <label>IRA: </label>
+                    <label>Salario: </label>
                     <input 
                         type='number'
                         step='any'
                         className='form-control'
-                        placeholder='Digite seu IRA'
-                        value={ira ?? 0.0}
+                        placeholder='Digite seu Salario'
                         onChange={
                             (event)=>{
-                                setIra(event.target.value)
+                                setSalary(event.target.value)
                             }
                         }
                          />
                 </div>
+
                 <div className='form-group' style={{marginTop:15}}>
                     <input 
                         type='submit' 
-                        value='Editar Estudante'
+                        value='Criar Professor'
                         className='btn btn-primary' 
                         />
                 </div>
@@ -109,4 +91,4 @@ const EditStudent = (props)=> {
     )
 }
 
-export default EditStudentPage
+export default CreateTeacherPage
