@@ -22,8 +22,9 @@ const EditTeacher = (props)=> {
       const params = useParams()
 
       useEffect(
+
           ()=>{
-              TeacherService.retrieve(
+            TeacherService.retrieve(
                   props.firebase.getFirestoreDb(),
                   (teacher)=>{
                       setName(teacher.name)
@@ -33,9 +34,9 @@ const EditTeacher = (props)=> {
                   params.id
               )
           }
-          ,
-          []
-      )
+            ,
+            [params.id,props.firebase]
+        )
 
       const handleSubmit = (event)=> {
           event.preventDefault()

@@ -62,7 +62,7 @@ const ListTeacher = (props) => {
                         <td>{teacher.course}</td>
                         <td>{teacher.salary}</td>
                         <td>
-                            <Link to={'/editStudent/' + teacher.id} className='btn btn-primary'>
+                            <Link to={'/editTeacher/' + teacher.id} className='btn btn-primary'>
                                 Editar
                             </Link>
                         </td>
